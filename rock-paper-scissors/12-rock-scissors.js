@@ -40,7 +40,7 @@ document.body.addEventListener('keydown',(event)=>{
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
   let result = "";
-  if ((playerMove = "scissors")) {
+  if ((playerMove === "scissors")) {
     if (computerMove === "rock") {
       result = "You loose";
     } else if (computerMove === "paper") {
@@ -48,7 +48,7 @@ function playGame(playerMove) {
     } else if (computerMove === "scissors") {
       result = "tie";
     }
-  } else if ((playerMove = "paper")) {
+  } else if ((playerMove === "paper")) {
     pickComputerMove();
     let result = "";
     if (computerMove === "rock") {
@@ -58,7 +58,7 @@ function playGame(playerMove) {
     } else if (computerMove === "scissors") {
       result = "You loose";
     }
-  } else if ((playerMove = "rock")) {
+  } else if ((playerMove === "rock")) {
     pickComputerMove();
 
     let result = "";
