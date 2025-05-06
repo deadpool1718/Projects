@@ -42,37 +42,36 @@ function playGame(playerMove) {
   let result = "";
   if ((playerMove === "scissors")) {
     if (computerMove === "rock") {
-      result = "You loose";
+      result = "You lose";
     } else if (computerMove === "paper") {
       result = "You win";
     } else if (computerMove === "scissors") {
       result = "tie";
     }
   } else if ((playerMove === "paper")) {
-    pickComputerMove();
-    let result = "";
+    
+    
     if (computerMove === "rock") {
       result = "You win";
     } else if (computerMove === "paper") {
       result = "tie";
     } else if (computerMove === "scissors") {
-      result = "You loose";
+      result = "You lose";
     }
   } else if ((playerMove === "rock")) {
-    pickComputerMove();
-
-    let result = "";
+    
+    
     if (computerMove === "rock") {
       result = "tie";
     } else if (computerMove === "paper") {
-      result = "You loose";
+      result = "You lose";
     } else if (computerMove === "scissors") {
       result = "You win";
     }
   }
   if (result === "You win") {
     score.wins += 1;
-  } else if (result === "You loose") {
+  } else if (result === "You lose") {
     score.losses += 1;
   } else if (result === "tie") {
     score.ties += 1;
